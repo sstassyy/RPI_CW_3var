@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Трекер Спортивных Тренировок</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мой Фитнес Трекер</h1>
+        
+        <div class="statistics">
+            <h2>Статистика</h2>
+            <div class="stats-block">
+                <p>Всего тренировок: <span id="total-workouts">0</span></p>
+            </div>
+        </div>
+
+        <div class="workout-form">
+            <h2>Добавить тренировку</h2>
+            <form id="workout-form">
+                <select id="sport" >
+                    <option value="">Выберите вид спорта</option>
+                    <option value="running">Бег</option>
+                    <option value="cycling">Велосипед</option>
+                    <option value="swimming">Плавание</option>
+                    <option value="gym">Тренажерный зал</option>
+                </select>
+
+                <input type="number" id="duration" placeholder="Длительность (мин)" required min="1" max="240">
+                
+                <select id="intensity" >
+                    <option value="">Интенсивность</option>
+                    <option value="low">Низкая</option>
+                    <option value="medium">Средняя</option>
+                    <option value="high">Высокая</option>
+                </select>
+
+                <input type="date" id="date" >
+
+                <button type="submit">Добавить тренировку</button>
+            </form>
+        </div>
+
+        <div class="filters">
+            <h2>Фильтры</h2>
+            <select id="sport-filter">
+                <option value="">Все виды спорта</option>
+                <option value="running">Бег</option>
+                <option value="cycling">Велосипед</option>
+                <option value="swimming">Плавание</option>
+                <option value="gym">Тренажерный зал</option>
+            </select>
+            <input type="date" id="date-filter" placeholder="Фильтр по дате">
+        </div>
+
+        <div class="workouts-list">
+            <h2>Мои тренировки</h2>
+            <div id="workouts-container"></div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
